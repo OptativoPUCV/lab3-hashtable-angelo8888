@@ -11,9 +11,9 @@ int enlarge_called=0;
 
 struct HashMap {
     Pair ** buckets;
-    long size; //cantidad de datos/pairs en la tabla
+    long size; //cantidad pairs
     long capacity; //capacidad de la tabla
-    long current; //indice del ultimo dato accedido
+    long current; //indice ultimo
 };
 
 Pair * createPair( char * key,  void * value) {
@@ -57,7 +57,26 @@ void insertMap(HashMap * map, char * key, void * value) {
 }
 
 void enlarge(HashMap * map) {
-    enlarge_called = 1; //no borrar (testing purposes
+  enlarge_called = 1; //no borrar (testing purposes
+  if (map == NULL)
+      return;
+
+  long old_capacity = map->capacity;
+  Pair ** old_buckets = map->buckets;
+
+  map->capacity *= 2;
+  map->buckets = (Pair **)calloc(map->capacity, sizeof(Pair *));
+  map->size = 0;
+
+  for (long i = 0; i < old_capacity; i++) {
+      if (old_buckets[i] != NULL && old_buckets[i]->key != NULL) {
+          insertMap(map, old_buckets[i]->key, old_buckets[i]->value);
+          free(old_buckets[i]->key);
+          free(old_buckets[i]);
+      }
+  }
+
+  free(old_buckets);
 }
 
 
