@@ -67,7 +67,7 @@ void eraseMap(HashMap * map,  char * key) {
   {
     free(pair->key);
       pair->key = NULL;
-    map->size--<
+    map->size--;
   }
 
 }
