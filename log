@@ -444,3 +444,13 @@ hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 46fef4d
+Sat 09 Sep 2023 02:45:21 AM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:114:32: error: expected identifier before ‘[’ token
+  114 |           return map->buckets->[pos];
+      |                                ^
+Compilation failed
+c7af8aa
