@@ -48,7 +48,7 @@ void insertMap(HashMap * map, char * key, void * value) {
     while (map->buckets[pos] != NULL) {
         if (is_equal(map->buckets[pos]->key, key))
             return;
-        pos = (pos + 1) % map->capacity
+        pos = (pos + 1) % map->capacity;
     }
 
     map->buckets[pos] = createPair(strdup(key), value);
