@@ -481,3 +481,15 @@ Sat 09 Sep 2023 02:46:30 AM UTC:
  tests:  17|0
 total_score: 70/70
 c89e36b
+Sat 09 Sep 2023 02:47:10 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c:122:1: error: unknown type name ‘s’
+  122 | s
+      | ^
+hashmap.c:123:6: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘*’ token
+  123 | Pair * firstMap(HashMap * map) {
+      |      ^
+Compilation failed
+a97fa4d
