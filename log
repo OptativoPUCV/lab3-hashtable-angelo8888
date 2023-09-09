@@ -330,3 +330,20 @@ hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 d51d899
+Sat 09 Sep 2023 02:42:34 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:110:5: error: expected ‘,’ or ‘;’ before ‘while’
+  110 |     while (map->bucket[pos] != NULL){
+      |     ^~~~~
+hashmap.c:108:10: error: unused variable ‘pos’ [-Werror=unused-variable]
+  108 |     long pos = hash(key, map->capacity)
+      |          ^~~
+hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+50e5391
