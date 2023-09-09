@@ -17,3 +17,16 @@ Sat 09 Sep 2023 02:09:08 AM UTC:
  tests:  1|5
 total_score: 10/70
 d076964
+Sat 09 Sep 2023 02:12:24 AM UTC: 
+ hashmap.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:68:5: error: void value not ignored as it ought to be
+   68 |     free(pair->key)<
+      |     ^~~~~~~~~~~~~~~
+hashmap.c:71:3: error: expected expression before ‘}’ token
+   71 |   }
+      |   ^
+Compilation failed
+e23c488
