@@ -1,0 +1,13 @@
+Sat 09 Sep 2023 02:09:01 AM UTC: 
+ hashmap.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createMap’:
+hashmap.c:58:18: error: expected ‘;’ before ‘map’
+   58 |     map->size = 0
+      |                  ^
+      |                  ;
+   59 |     map->current = -1;
+      |     ~~~           
+Compilation failed
+94c93de
