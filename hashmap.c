@@ -84,10 +84,10 @@ void eraseMap(HashMap * map,  char * key) {
  
 Pair * searchMap(HashMap * map,  char * key) {
   return NULL;
-    if (map == NULL || key == NULL)
+    /*if (map == NULL || key == NULL)
         return NULL;
 
-    long pos = hash(key, map->capacity);
+    long pos = hash(key, map->capacity);*/
 }
 
 
