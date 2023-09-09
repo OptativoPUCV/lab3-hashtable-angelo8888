@@ -30,3 +30,13 @@ hashmap.c:71:3: error: expected expression before ‘}’ token
       |   ^
 Compilation failed
 e23c488
+Sat 09 Sep 2023 02:12:33 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:71:3: error: expected expression before ‘}’ token
+   71 |   }
+      |   ^
+Compilation failed
+fcb9ac7
