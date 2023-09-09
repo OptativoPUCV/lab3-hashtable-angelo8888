@@ -51,3 +51,16 @@ Sat 09 Sep 2023 02:13:34 AM UTC:
  tests:  1|5
 total_score: 10/70
 c8ba5d9
+Sat 09 Sep 2023 02:16:23 AM UTC: 
+ hashmap.c | 16 +++++++++++++---
+ 1 file changed, 13 insertions(+), 3 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:51:40: error: expected ‘;’ before ‘}’ token
+   51 |         pos = (pos + 1) % map->capacity
+      |                                        ^
+      |                                        ;
+   52 |     }
+      |     ~                                   
+Compilation failed
+6f1cb8e
