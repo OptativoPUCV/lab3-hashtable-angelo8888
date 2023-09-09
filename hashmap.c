@@ -105,7 +105,7 @@ Pair * searchMap(HashMap * map,  char * key) {
     if (map == NULL)
       return NULL;
     
-    long pos = hash(key, map->capacity)
+    long pos = hash(key, map->capacity);
     
     while (map->bucket[pos] != NULL){
       is (is_equals(map-> bucket[pos]->key, key))

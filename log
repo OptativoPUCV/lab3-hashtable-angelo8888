@@ -347,3 +347,38 @@ hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return
 cc1: all warnings being treated as errors
 Compilation failed
 50e5391
+Sat 09 Sep 2023 02:42:52 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:110:17: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+  110 |     while (map->bucket[pos] != NULL){
+      |                 ^~~~~~
+      |                 buckets
+hashmap.c:111:7: error: implicit declaration of function ‘is’ [-Werror=implicit-function-declaration]
+  111 |       is (is_equals(map-> bucket[pos]->key, key))
+      |       ^~
+hashmap.c:111:11: error: implicit declaration of function ‘is_equals’; did you mean ‘is_equal’? [-Werror=implicit-function-declaration]
+  111 |       is (is_equals(map-> bucket[pos]->key, key))
+      |           ^~~~~~~~~
+      |           is_equal
+hashmap.c:111:27: error: ‘HashMap’ {aka ‘struct HashMap’} has no member named ‘bucket’; did you mean ‘buckets’?
+  111 |       is (is_equals(map-> bucket[pos]->key, key))
+      |                           ^~~~~~
+      |                           buckets
+hashmap.c:111:50: error: expected ‘;’ before ‘{’ token
+  111 |       is (is_equals(map-> bucket[pos]->key, key))
+      |                                                  ^
+      |                                                  ;
+  112 |       {
+      |       ~                                           
+hashmap.c:108:10: error: variable ‘pos’ set but not used [-Werror=unused-but-set-variable]
+  108 |     long pos = hash(key, map->capacity);
+      |          ^~~
+hashmap.c:119:1: error: control reaches end of non-void function [-Werror=return-type]
+  119 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+314b80f
