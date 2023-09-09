@@ -119,3 +119,4 @@ Pair * nextMap(HashMap * map) {
 
     map->current = -1;
     return NULL;
+}
