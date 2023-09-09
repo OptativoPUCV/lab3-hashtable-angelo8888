@@ -475,3 +475,9 @@ hashmap.c:114:32: error: expected identifier before ‘[’ token
       |                                ^
 Compilation failed
 57a1f23
+Sat 09 Sep 2023 02:46:30 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  17|0
+total_score: 70/70
+c89e36b
