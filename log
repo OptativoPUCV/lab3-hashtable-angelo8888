@@ -499,3 +499,23 @@ Sat 09 Sep 2023 02:47:23 AM UTC:
  tests:  17|0
 total_score: 70/70
 714420a
+Sat 09 Sep 2023 02:47:55 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘createPair’:
+hashmap.c:21:8: error: array subscript ‘Pair[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   21 |     new->key = key;
+      |        ^~
+hashmap.c:20:26: note: referencing an object of size 8 allocated by ‘malloc’
+   20 |     Pair * new = (Pair *)malloc(sizeof(Pair *));
+      |                          ^~~~~~~~~~~~~~~~~~~~~~
+hashmap.c:22:8: error: array subscript ‘Pair[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   22 |     new->value = value;
+      |        ^~
+hashmap.c:20:26: note: referencing an object of size 8 allocated by ‘malloc’
+   20 |     Pair * new = (Pair *)malloc(sizeof(Pair *));
+      |                          ^~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d75c951
