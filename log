@@ -465,3 +465,13 @@ hashmap.c:114:30: error: ‘*map->buckets’ is a pointer; did you mean to use �
       |                              ->
 Compilation failed
 cc40422
+Sat 09 Sep 2023 02:46:19 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘searchMap’:
+hashmap.c:114:32: error: expected identifier before ‘[’ token
+  114 |           return map->buckets->[pos];
+      |                                ^
+Compilation failed
+57a1f23
