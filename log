@@ -11,3 +11,9 @@ hashmap.c:58:18: error: expected ‘;’ before ‘map’
       |     ~~~           
 Compilation failed
 94c93de
+Sat 09 Sep 2023 02:09:08 AM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/70
+d076964
